@@ -190,7 +190,7 @@ function updateCounts() {
     leaveCount = 0;
 
     var radios = document.querySelectorAll('input[type="radio"]:checked');
-    radios.forEach(radio => {
+    radios.forEach(function(radio) {
         if (radio.value === 'present') {
             presentCount++;
         } else if (radio.value === 'absent') {
@@ -199,7 +199,6 @@ function updateCounts() {
             leaveCount++;
         }
     });
-
     userPresent.innerHTML = presentCount;
     userAbsent.innerHTML = absentCount;
     userLeave.innerHTML = leaveCount;
